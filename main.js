@@ -32,7 +32,6 @@ const ConseguirPreguntas = async () => {
     try {
         const respuesta = await fetch('https://opentdb.com/api.php?amount=10&category=15&difficulty=easy&type=multiple')
         const data = await respuesta.json()
-        console.log(data.results)
 
         // Establecer la primera pregunta
         preguntaActual = data.results[preguntaNumero]
