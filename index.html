@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Encabezado del Quiz -->
+  <header class="quiz-header">
+    Quiz
+  </header>
+
+  <!-- Contenedor de las Tarjetas -->
+  <div id='view1' class="view active">
+    <div class="card card-custom">
+      <div class="card-body text-center">
+        <h5 class="card-title">¡Welcome to the quiz!</h5>
+        <button class="btn btn-primary" onclick="navigateToView('view2')">Take the Quiz</button>
+        
+      </div>
+    </div>
+
+    <div class="card card-custom">
+      <div class="card-body text-center">
+        <h5 class="card-title">Your stats</h5>
+        <p>Statistics will be displayed here.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id ='view2' class="view">
+    <div class="card card-custom">
+      <div class="card-body text-center">
+        <h5 class="card-title preguntaPrincipal"></h5>
+
+                <div class="opciones">
+                    <div class="btn btn-outline-info opcion1 opcion"></div>
+                    <div class="btn btn-outline-info opcion2 opcion"></div>
+                    <div class="btn btn-outline-info opcion3 opcion"></div>
+                    <div class="btn btn-outline-info opcion4 opcion"></div>
+                </div>
+        
+            
+                <button class="btn btn-primary boton-siguiente">Siguiente</button>
+
+                <div id="fin" class="view">
+                  <h1>Fin del Quiz</h1>
+                  <p>¡Gracias por participar!</p>
+                  <button onclick="navigateToView('inicio')">Reiniciar Quiz</button>
+              </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<script src="main.js"></script>
+</html>
+
