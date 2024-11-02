@@ -2,11 +2,20 @@
   display: none;
 }
 
+
+.correct {
+  background-color: rgb(0, 255, 72);
+}
+
+.wrong {
+  background-color: rgb(255, 0, 0);
+}
 /* Estilo general del cuerpo */
 body {
   background-color: #ffffff;
   font-family: Georgia, Times,
 }
+
 
 /* Encabezado del Quiz */
 .quiz-header {
