@@ -38,21 +38,21 @@ Antes de ejecutar la aplicación, asegúrate de tener lo siguiente:
 # HTML (index.html)
 El archivo HTML proporciona la estructura para la aplicación de quiz. Incluye:
 
-· Encabezado: Muestra el título del quiz.
-·Componente de Tarjeta: Contiene el botón de inicio del quiz y botones de preguntas y respuestas generados dinámicamente.
-·Tarjeta de Puntaje: Muestra el puntaje final y un gráfico.
+- Encabezado: Muestra el título del quiz.
+- Componente de Tarjeta: Contiene el botón de inicio del quiz y botones de preguntas y respuestas generados dinámicamente.
+- Tarjeta de Puntaje: Muestra el puntaje final y un gráfico.
 # CSS (style.css)
 El archivo CSS da estilo a la aplicación, haciéndola visualmente atractiva. Estilos clave incluyen:
 
-.hide: Una clase de utilidad para ocultar elementos.
-.card: Estilos para los componentes de tarjeta.
-.quiz-header: Estilos para el encabezado del quiz.
+- hide: Una clase de utilidad para ocultar elementos.
+- card: Estilos para los componentes de tarjeta.
+- quiz-header: Estilos para el encabezado del quiz.
 # JavaScript (main.js)
 El archivo JavaScript contiene la lógica del quiz:
 
-·Obteniendo Preguntas: La función getQuestions obtiene preguntas de trivia de la API.
-·Lógica del Juego: Las funciones manejan el inicio del quiz, la presentación de preguntas, la selección de respuestas y la visualización de resultados.
-·Gráficos: La función showFinalScoreChart utiliza Chart.js para visualizar el puntaje final.
+- Obteniendo Preguntas: La función getQuestions obtiene preguntas de trivia de la API.
+- Lógica del Juego: Las funciones manejan el inicio del quiz, la presentación de preguntas, la selección de respuestas y la visualización de resultados.
+- Gráficos: La función showFinalScoreChart utiliza Chart.js para visualizar el puntaje final.
 
 ## Instalaciòn
 Clona el repositorio:
