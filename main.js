@@ -9,9 +9,8 @@ const scoreButton = document.getElementById("score-btn");
 let questions = [];
 let currentQuestionIndex;
 let score = 0;
-let scoreChart; // Variable para almacenar la instancia de la gráfica
+let scoreChart;
 
-// Función para obtener preguntas de la API
 const getQuestions = async () => {
   try {
     const res = await axios.get(
@@ -29,7 +28,6 @@ const getQuestions = async () => {
         answers: answers,
       };
     });
-    console.log(questions);
   } catch (error) {
     console.error("Error al obtener preguntas:", error);
   }
@@ -109,9 +107,9 @@ function selectAnswer(e) {
     nextButton.classList.remove("hide");
   } else {
     questionContainerElement.classList.add("hide");
-    scoreButton.innerText = `Puntaje Final: ${score}/${questions.length}`;
+    scoreButton.innerText = `Final Score: ${score}/${questions.length}`;
     scoreButton.classList.remove("hide");
-    startButton.innerText = "Reiniciar";
+    startButton.innerText = "Restart";
     startButton.classList.remove("hide");
   }
 }
@@ -124,36 +122,33 @@ nextButton.addEventListener("click", () => {
 
 getQuestions();
 
-// Función para mostrar la tarjeta de la gráfica de porcentaje
 function showFinalScoreChart() {
   const statsCard = document.getElementById("stats-card");
   const scoreChartElement = document.getElementById("scoreChart");
 
-  // Verificar si los elementos existen
   if (!statsCard || !scoreChartElement) {
     console.error("Elementos de la tarjeta de estadísticas o gráfico no encontrados.");
     return;
   }
 
-  // Calcular porcentaje de respuestas correctas e incorrectas
+
   const correctPercentage = (score / questions.length) * 100;
   const incorrectPercentage = 100 - correctPercentage;
 
-  // Configurar los datos para la gráfica
+
   const chartData = {
     labels: ['Correctas', 'Incorrectas'],
     datasets: [{
       data: [correctPercentage, incorrectPercentage],
-      backgroundColor: ['#4CAF50', '#FF5252'] // Colores para correctas e incorrectas
+      backgroundColor: ['#4CAF50', '#FF5252']
     }]
   };
 
-  // Destruir la gráfica anterior si existe para evitar duplicados
+
   if (scoreChart) {
     scoreChart.destroy();
   }
 
-  // Crear una nueva gráfica de torta para mostrar el porcentaje
   scoreChart = new Chart(scoreChartElement, {
     type: 'pie',
     data: chartData,
@@ -170,9 +165,8 @@ function showFinalScoreChart() {
     }
   });
 
-  // Mostrar la tarjeta de estadísticas
+
   statsCard.classList.remove("hide");
 }
 
-// Evento para mostrar la gráfica al hacer clic en el botón de puntaje final
 scoreButton.addEventListener("click", showFinalScoreChart);
