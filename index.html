@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="quiz-header">
     Quiz
@@ -15,34 +17,34 @@
   <div class="container">
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-      
+
         <h5 id="start-title" class="card-title">Welcome to the Quiz</h5>
         <button id="start-btn" class="btn start-btn">Start Quiz</button>
-        
-        
+
+
         <div id="question-container" class="question-container hide">
           <div id="question" class="question"></div>
           <div id="answer-buttons" class="answer-buttons"></div>
         </div>
-        
-       
-        <button id="next-btn" class="btn boton-siguiente hide">Next</button>
+
+        <button id="next-btn" class="btn next-button hide">Next</button>
         <button id="score-btn" class="btn score-btn hide"></button>
         <button id="fin" class="score-container hide"></button>
-   
- <div id="stats-card" class="card mt-3 hide">
-  <h3 class="card-header">Resultado del Quiz</h3>
-  <div class="card-body">
-    <canvas id="scoreChart"></canvas>
-  </div>
-</div>
-</div>
-</div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="main.js"></script> 
+        <div id="stats-card" class="card mt-2 hide">
+          <h3 class="card-header">Quiz Result</h3>
+          <div class="card-body">
+            <canvas id="scoreChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>

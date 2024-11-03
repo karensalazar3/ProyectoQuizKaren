@@ -5,7 +5,7 @@ const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const finContenedor = document.querySelector("#fin");
-const scoreButton = document.getElementById("score-btn"); 
+const scoreButton = document.getElementById("score-btn");
 let questions = [];
 let currentQuestionIndex;
 let score = 0;
@@ -46,9 +46,9 @@ function shuffle(array) {
 function startGame() {
   startTitle.classList.add("hide");
   startButton.classList.add("hide");
-  scoreButton.classList.add("hide"); 
+  scoreButton.classList.add("hide");
   currentQuestionIndex = 0;
-  score = 0; 
+  score = 0;
   questionContainerElement.classList.remove("hide");
   document.getElementById("stats-card").classList.add("hide");
   if (scoreChart) {
@@ -60,7 +60,7 @@ function startGame() {
 
 function showQuestion(question) {
   questionElement.innerText = question.question;
-  answerButtonsElement.innerHTML = ""; 
+  answerButtonsElement.innerHTML = "";
   question.answers.forEach((answer) => {
     const button = document.createElement("button");
     button.innerText = answer.text;
@@ -98,7 +98,7 @@ function selectAnswer(e) {
   setStatusClass(selectedButton, correct);
 
   if (correct) {
-    score++; 
+    score++;
   }
 
   Array.from(answerButtonsElement.children).forEach((button) => {
@@ -161,7 +161,7 @@ function showFinalScoreChart() {
       plugins: {
         tooltip: {
           callbacks: {
-            label: function(context) {
+            label: function (context) {
               return `${context.label}: ${context.raw.toFixed(2)}%`;
             }
           }
